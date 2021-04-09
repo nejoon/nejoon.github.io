@@ -11,8 +11,11 @@ git commit
 
 git push
 
+### 냉장고에서 빼기
 
 git pull
+
+git pull origin main
 
 
 branch
