@@ -2,8 +2,8 @@
 layout: post
 title:  "자주쓰는 git command정리"
 author: nejoon kim
-category: git
-tags:	git
+category: dev
+tags:	dev
 comments: true
 ---
 
