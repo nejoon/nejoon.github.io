@@ -1,31 +1,207 @@
 {
- "sejun": {
-  "name": "김세준",
-  "alias": "새와달",
-  "role": "프리랜서 디자이너 · 7년차",
-  "summary": "브랜딩·그래픽 디자인을 기반으로 마케팅 광고 소재, UI/UX 디자인, 편집 디자인까지 폭넓게 작업합니다. 최근에는 사업 소개·세일즈·IR 목적의 PPT 디자인을 주로 맡아, 디자인뿐 아니라 내용 구조와 전달 방식까지 함께 설계합니다.",
-  "approach": [
-   "기획 의도를 빠르게 이해하고 상황에 맞는 방향을 먼저 제안합니다.",
-   "왜 이 디자인이 필요한지, 어떤 방식이 더 효과적인지를 기준으로 판단합니다.",
-   "AI를 이미지 제작·그래픽 확장·아이디어 도출에 실무적으로 활용합니다."
-  ],
-  "stats": [["경력", "7년차"], ["완료 업무", "40회 이상"], ["포트폴리오", "27개"]],
-  "services": ["브랜드 디자인", "로고 디자인", "웹·모바일 UI/UX", "PPT · IR 디자인", "SNS · 광고 소재", "상세페이지"],
-  "tools": ["Figma", "Photoshop", "Illustrator", "InDesign", "XD", "After Effects", "Premiere Pro", "Final Cut Pro", "CapCut", "PowerPoint", "WordPress", "Slack"],
-  "links": [["플로우웍스 프로필", "https://flowworks.io/profile/partner/1063"]]
- },
- "mingyeong": {
-  "name": "문민경",
-  "alias": "",
-  "role": "Brand & Visual Designer",
-  "summary": "브랜드가 처음 마주치는 모든 순간의 톤을 다듬습니다. 컬러·타이포그래피·사진 톤을 하나의 결로 묶는 비주얼 작업을 맡고 있습니다.",
-  "approach": [
-   "브랜드는 로고 하나가 아니라 처음 마주치는 모든 순간이라고 생각합니다.",
-   "컬러와 타이포 규칙을 먼저 세워 화면 전체의 결을 맞춥니다."
-  ],
-  "stats": [],
-  "services": ["브랜드 비주얼", "컬러 · 타이포 시스템", "그래픽 모티프"],
-  "tools": [],
-  "links": []
- }
+  "sejun": {
+    "name": "김세준",
+    "alias": "새와달",
+    "role": "프리랜서 디자이너 · 7년차",
+    "summary": "브랜딩·그래픽 디자인을 기반으로 마케팅 광고 소재, UI/UX 디자인, 편집 디자인까지 폭넓게 작업합니다. 최근에는 사업 소개·세일즈·IR 목적의 PPT 디자인을 주로 맡아, 디자인뿐 아니라 내용 구조와 전달 방식까지 함께 설계합니다.",
+    "approach": [
+      "기획 의도를 빠르게 이해하고 상황에 맞는 방향을 먼저 제안합니다.",
+      "왜 이 디자인이 필요한지, 어떤 방식이 더 효과적인지를 기준으로 판단합니다.",
+      "AI를 이미지 제작·그래픽 확장·아이디어 도출에 실무적으로 활용합니다."
+    ],
+    "stats": [
+      [
+        "경력",
+        "7년차"
+      ],
+      [
+        "완료 업무",
+        "40회 이상"
+      ],
+      [
+        "포트폴리오",
+        "27개"
+      ]
+    ],
+    "services": [
+      "브랜드 디자인",
+      "로고 디자인",
+      "웹·모바일 UI/UX",
+      "PPT · IR 디자인",
+      "SNS · 광고 소재",
+      "상세페이지"
+    ],
+    "tools": [
+      "Figma",
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "XD",
+      "After Effects",
+      "Premiere Pro",
+      "Final Cut Pro",
+      "CapCut",
+      "PowerPoint",
+      "WordPress",
+      "Slack"
+    ],
+    "links": [
+      [
+        "플로우웍스 프로필",
+        "https://flowworks.io/profile/partner/1063"
+      ]
+    ],
+    "name_en": "Sejun Kim",
+    "alias_en": "새와달",
+    "role_en": "Freelance Designer · 7th year",
+    "summary_en": "With a foundation in branding and graphic design, I work across marketing creatives, UI/UX, and editorial design. My recent focus is presentation design for business introductions, sales, and investor relations, shaping both the visual design and the structure of the story.",
+    "approach_en": [
+      "I quickly understand the intent behind a brief and propose a direction suited to the context.",
+      "I make design decisions based on why the work is needed and what will communicate most effectively.",
+      "I use AI in my workflow to create images, develop graphics, and explore ideas."
+    ],
+    "stats_en": [
+      [
+        "Experience",
+        "7th year"
+      ],
+      [
+        "Projects completed",
+        "40+"
+      ],
+      [
+        "Portfolio projects",
+        "27"
+      ]
+    ],
+    "services_en": [
+      "Brand design",
+      "Logo design",
+      "Web & mobile UI/UX",
+      "Presentation & IR design",
+      "Social & ad creatives",
+      "Product detail pages"
+    ],
+    "tools_en": [
+      "Figma",
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "XD",
+      "After Effects",
+      "Premiere Pro",
+      "Final Cut Pro",
+      "CapCut",
+      "PowerPoint",
+      "WordPress",
+      "Slack"
+    ],
+    "links_en": [
+      [
+        "Flowworks profile",
+        "https://flowworks.io/profile/partner/1063"
+      ]
+    ],
+    "name_ja": "キム・セジュン",
+    "alias_ja": "새와달",
+    "role_ja": "フリーランスデザイナー · 7年目",
+    "summary_ja": "ブランディングとグラフィックデザインを軸に、広告クリエイティブ、UI/UX、エディトリアルデザインまで幅広く手がけています。最近は事業紹介・営業・IR向けのプレゼンテーション資料を中心に、デザインだけでなく、内容の構成や伝え方から設計しています。",
+    "approach_ja": [
+      "企画の意図を素早く理解し、状況に合った方向性を提案します。",
+      "なぜそのデザインが必要なのか、どうすればより効果的に伝わるのかを基準に判断します。",
+      "画像制作、グラフィックの展開、アイデアの発想にAIを実務で活用しています。"
+    ],
+    "stats_ja": [
+      [
+        "経験",
+        "7年目"
+      ],
+      [
+        "完了した業務",
+        "40件以上"
+      ],
+      [
+        "制作実績",
+        "27件"
+      ]
+    ],
+    "services_ja": [
+      "ブランドデザイン",
+      "ロゴデザイン",
+      "Web・モバイルUI/UX",
+      "プレゼン資料・IRデザイン",
+      "SNS・広告クリエイティブ",
+      "商品詳細ページ"
+    ],
+    "tools_ja": [
+      "Figma",
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "XD",
+      "After Effects",
+      "Premiere Pro",
+      "Final Cut Pro",
+      "CapCut",
+      "PowerPoint",
+      "WordPress",
+      "Slack"
+    ],
+    "links_ja": [
+      [
+        "Flowworksプロフィール",
+        "https://flowworks.io/profile/partner/1063"
+      ]
+    ]
+  },
+  "mingyeong": {
+    "name": "문민경",
+    "alias": "",
+    "role": "Brand & Visual Designer",
+    "summary": "브랜드가 처음 마주치는 모든 순간의 톤을 다듬습니다. 컬러·타이포그래피·사진 톤을 하나의 결로 묶는 비주얼 작업을 맡고 있습니다.",
+    "approach": [
+      "브랜드는 로고 하나가 아니라 처음 마주치는 모든 순간이라고 생각합니다.",
+      "컬러와 타이포 규칙을 먼저 세워 화면 전체의 결을 맞춥니다."
+    ],
+    "stats": [],
+    "services": [
+      "브랜드 비주얼",
+      "컬러 · 타이포 시스템",
+      "그래픽 모티프"
+    ],
+    "tools": [],
+    "links": [],
+    "name_en": "Mingyeong Moon",
+    "alias_en": "",
+    "role_en": "Brand & Visual Designer",
+    "summary_en": "I shape the visual tone of every first encounter with a brand. My work brings color, typography, and photographic style together into a cohesive visual identity.",
+    "approach_en": [
+      "I see a brand as every moment of first contact, beyond the logo itself.",
+      "I establish color and typography guidelines first to create a consistent visual language across the design."
+    ],
+    "stats_en": [],
+    "services_en": [
+      "Brand visuals",
+      "Color & typography systems",
+      "Graphic motifs"
+    ],
+    "tools_en": [],
+    "links_en": [],
+    "name_ja": "ムン・ミンギョン",
+    "alias_ja": "",
+    "role_ja": "ブランド・ビジュアルデザイナー",
+    "summary_ja": "ブランドと初めて出会う、あらゆる場面のトーンを整えています。色、タイポグラフィ、写真のトーンを一つにつなぎ、一貫したビジュアルをつくります。",
+    "approach_ja": [
+      "ブランドとはロゴだけでなく、初めて触れるあらゆる瞬間の積み重ねだと考えています。",
+      "色とタイポグラフィのルールを先に定め、画面全体に統一感を持たせます。"
+    ],
+    "stats_ja": [],
+    "services_ja": [
+      "ブランドビジュアル",
+      "カラー・タイポグラフィシステム",
+      "グラフィックモチーフ"
+    ],
+    "tools_ja": [],
+    "links_ja": []
+  }
 }

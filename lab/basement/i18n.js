@@ -1,6 +1,12 @@
 // All interface copy lives here. Portfolio project copy lives in portfolio.json.
 export const dictionary = {
   "ko": {
+    "profile.title": "프로필",
+    "profile.approach": "일하는 방식",
+    "profile.services": "서비스",
+    "profile.tools": "사용 도구",
+    "profile.links": "링크",
+    "profile.portfolio": "포트폴리오 보기",
     "language": "언어",
     "close": "닫기",
     "again": "다른 말 듣기",
@@ -235,6 +241,12 @@ export const dictionary = {
     "terminal.ascii": "█   █ █████ █████  ███   ███  █   █\n██  █ █        █  █   █ █   █ ██  █\n█ █ █ ████     █  █   █ █   █ █ █ █\n█  ██ █     █  █  █   █ █   █ █  ██\n█   █ █████  ██    ███   ███  █   █"
   },
   "en": {
+    "profile.title": "PROFILE",
+    "profile.approach": "How I work",
+    "profile.services": "Services",
+    "profile.tools": "Tools",
+    "profile.links": "Links",
+    "profile.portfolio": "View portfolio",
     "language": "Language",
     "close": "Close",
     "again": "Hear another thought",
@@ -469,6 +481,12 @@ export const dictionary = {
     "terminal.ascii": "█   █ █████ █████  ███   ███  █   █\n██  █ █        █  █   █ █   █ ██  █\n█ █ █ ████     █  █   █ █   █ █ █ █\n█  ██ █     █  █  █   █ █   █ █  ██\n█   █ █████  ██    ███   ███  █   █"
   },
   "ja": {
+    "profile.title": "プロフィール",
+    "profile.approach": "仕事への取り組み",
+    "profile.services": "サービス",
+    "profile.tools": "使用ツール",
+    "profile.links": "リンク",
+    "profile.portfolio": "ポートフォリオを見る",
     "language": "言語",
     "close": "閉じる",
     "again": "ほかの話を聞く",
@@ -756,3 +774,6 @@ export function languageSwitch(terminal = false) {
 }
 export function projectText(item, field) { return (language === 'ko' ? item[field] : item[`${field}_${language}`]) || item[field] || ''; }
 document.documentElement.lang = language;
+
+// Profile values include arrays and intentionally empty strings.
+export function profileText(item, field) { return (language === 'ko' ? item[field] : item[`${field}_${language}`]) ?? item[field]; }

@@ -1,4 +1,4 @@
-import { t, getLang, onLangChange, translateDOM, languageSwitch, projectText } from './i18n.js';
+import { t, getLang, onLangChange, translateDOM, projectText } from './i18n.js';
 import * as THREE from 'three';
 
 export function createPortfolio({scene,targets,box,wood,black,led,renderer,wake,host,reduced}) {
@@ -36,7 +36,6 @@ export function createPortfolio({scene,targets,box,wood,black,led,renderer,wake,
   chip.addEventListener('click',()=>actions?.overview());
   const dialog=document.createElement('dialog');dialog.className='project-modal';dialog.lang=getLang();dialog.setAttribute('aria-labelledby','project-title');
   dialog.innerHTML=`<div class="project-panel"><button class="project-close" data-i18n-aria-label="close" type="button">×</button><header><span class="mono project-category"></span><h2 id="project-title"></h2><p class="project-description"></p></header><section class="project-gallery" data-i18n-aria-label="project.images"><img class="project-main" loading="lazy" alt=""><div class="gallery-controls"><button type="button" data-image="-1" data-i18n-aria-label="image.prev">←</button><span class="mono gallery-count" aria-live="polite"></span><button type="button" data-image="1" data-i18n-aria-label="image.next">→</button></div><div class="project-thumbnails"></div></section><a class="project-link" target="_blank" rel="noopener" data-i18n="project.full"></a><footer><button type="button" data-project="-1" data-i18n="project.prev"></button><span class="mono project-count"></span><button type="button" data-project="1" data-i18n="project.next"></button></footer></div>`;
-  dialog.querySelector('header').prepend(languageSwitch());
   document.body.append(dialog);translateDOM(dialog);const el=s=>dialog.querySelector(s);
   function showImage(index){
     const data=selected.userData.project;imageIndex=(index+data.images.length)%data.images.length;
