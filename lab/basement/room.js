@@ -1,3 +1,4 @@
+import { t, onLangChange } from './i18n.js';
 import * as THREE from 'three';
 import { createPortfolio } from './portfolio.js';
 import { createEncounters } from './encounters.js';
@@ -49,7 +50,13 @@ export function createRoom(host, reduced) {
   function point(color,intensity,x,y,z,distance=12){const light=new THREE.PointLight(color,intensity,distance,2);light.position.set(x,y,z);scene.add(light);return light;}
   let shadowLights=0;
   function spot(color,intensity,position,target,angle=.65){const light=new THREE.SpotLight(color,intensity,35,angle,.65,1.5);light.position.set(...position);light.target.position.set(...target);light.castShadow=!mobile && shadowLights++<3;light.shadow.mapSize.set(1024,1024);light.shadow.bias=-.001;light.shadow.normalBias=.035;scene.add(light,light.target);return light;}
-  function canvasLabel(text,w=1024,h=256,color='#ffd6ac',font='800 175px Geist, Arial'){const c=document.createElement('canvas');c.width=w;c.height=h;const cctx=c.getContext('2d');cctx.fillStyle=color;cctx.font=font;cctx.textAlign='center';cctx.textBaseline='middle';cctx.fillText(text,w/2,h/2);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;}
+  const canvasLabels=[];
+  function canvasLabel(key,w=1024,h=256,color='#ffd6ac',font='800 175px Geist, Arial') {
+    const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');
+    const map=new THREE.CanvasTexture(c);map.colorSpace=THREE.SRGBColorSpace;
+    const redraw=()=>{ctx.clearRect(0,0,w,h);ctx.fillStyle=color;ctx.font=font+', "Apple SD Gothic Neo", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(t(key),w/2,h/2,w*.94);map.needsUpdate=true;};
+    canvasLabels.push(redraw);redraw();return map;
+  }
   box(25,.25,23,0,-.15,0,concrete);
   box(24,9,.3,0,4.5,-8,concrete);
   box(.3,9,20,-12,4.5,1,concrete);
@@ -91,13 +98,13 @@ export function createRoom(host, reduced) {
   for(const [x,z] of [[-8,-3],[0,1],[7,-2]]){rod([x,8,z],[x,6.3,z],.015);const shade=new THREE.Mesh(new THREE.ConeGeometry(.38,.3,24,1,true),dark);shade.position.set(x,6.3,z);scene.add(shade);box(.35,.025,.35,x,6.16,z,whiteLED);spot('#ffd4a0',110,[x,6.1,z],[x,0,z],.7);}
   // Interactive groups are raycast recursively; labels are inherited from parents.
   const targets=[];
-  function interactive(name){const group=new THREE.Group();group.userData.label=name;scene.add(group);targets.push(group);return group;}
-  const arcade=interactive('ARCADE / INSERT CURIOSITY');arcade.position.set(-7.2,0,-3.7);arcade.rotation.y=.23;
+  function interactive(key){const group=new THREE.Group();group.userData.labelKey=key;group.userData.label=t(key);scene.add(group);targets.push(group);return group;}
+  const arcade=interactive('hover.arcade');arcade.position.set(-7.2,0,-3.7);arcade.rotation.y=.23;
   box(1.25,1.1,.9,0,.55,0,orange,arcade);box(1.25,1.6,.8,0,1.65,-.17,dark,arcade);box(1.33,.35,1,0,2.58,-.04,orange,arcade);box(1.36,.14,.8,0,1.25,.3,dark,arcade);
   for(const x of [-.64,.64])box(.08,2.6,.95,x,1.3,-.03,black,arcade);
   const arcadeCanvas=document.createElement('canvas');arcadeCanvas.width=256;arcadeCanvas.height=256;const ac=arcadeCanvas.getContext('2d');const arcadeTexture=new THREE.CanvasTexture(arcadeCanvas);arcadeTexture.magFilter=THREE.NearestFilter;arcadeTexture.colorSpace=THREE.SRGBColorSpace;
   const arcadeScreen=new THREE.Mesh(new THREE.PlaneGeometry(.94,.84),new THREE.MeshStandardMaterial({map:arcadeTexture,emissiveMap:arcadeTexture,emissive:'#ffffff',emissiveIntensity:2}));arcadeScreen.position.set(0,1.93,.253);arcadeScreen.rotation.x=-.13;arcade.add(arcadeScreen);
-  const marquee=canvasLabel('DATA RUN',512,100,'#ffbc6b','700 64px monospace');const marqueeMesh=new THREE.Mesh(new THREE.PlaneGeometry(1.08,.22),new THREE.MeshBasicMaterial({map:marquee,transparent:true}));marqueeMesh.position.set(0,2.6,.47);arcade.add(marqueeMesh);
+  const marquee=canvasLabel('arcade.title',512,100,'#ffbc6b','700 64px monospace');const marqueeMesh=new THREE.Mesh(new THREE.PlaneGeometry(1.08,.22),new THREE.MeshBasicMaterial({map:marquee,transparent:true}));marqueeMesh.position.set(0,2.6,.47);arcade.add(marqueeMesh);
   rod([-.27,1.32,.45],[-.27,1.52,.45],.025,metal,arcade);const ball=new THREE.Mesh(new THREE.SphereGeometry(.075,12,8),orange);ball.position.set(-.27,1.54,.45);arcade.add(ball);
   for(let i=0;i<3;i++){const b=new THREE.Mesh(new THREE.CylinderGeometry(.055,.055,.035,12),led);b.position.set(.1+i*.14,1.34,.5);arcade.add(b);}point('#ff4d16',13,-7.1,1.9,-2.8,4);
   // CRT scanlines, drifting noise, and live plots. Curvature is in the geometry.
@@ -106,7 +113,7 @@ export function createRoom(host, reduced) {
   const screenFragment=`varying vec2 vUv;uniform float time;uniform float seed;uniform vec3 tint;
   float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
   void main(){vec2 uv=vUv;float n=hash(floor(uv*vec2(160.,110.))+floor(time*12.)+seed);float scan=.78+.22*sin(uv.y*420.);float trace=exp(-abs(uv.y-(.47+.14*sin(uv.x*22.+time+seed)+.06*sin(uv.x*63.-time)))*100.);float grid=step(.97,fract(uv.x*12.))*.14+step(.97,fract(uv.y*9.))*.14;float bars=step(uv.y,.15+hash(vec2(floor(uv.x*14.),seed))*.22)*.18;float edge=pow(max(0.,16.*uv.x*uv.y*(1.-uv.x)*(1.-uv.y)),.3);gl_FragColor=vec4(tint*(.07+n*.15+trace*1.8+grid+bars)*scan*edge,1.);}`;
-  const monitors=interactive('MONITORS / LIVE SIGNAL');monitors.position.set(6.7,0,-5.6);monitors.rotation.y=-.18;
+  const monitors=interactive('hover.monitors');monitors.position.set(6.7,0,-5.6);monitors.rotation.y=-.18;
   for(let i=0;i<8;i++){
     const col=i%3,row=Math.floor(i/3),x=(col-1)*1.43+(row===2?.3:0),y=.73+row*1.25;
     box(1.35,1.12,1.05,x,y,-row*.05, i%3===0?ivory:dark,monitors);box(1.13,.87,.04,x-.04,y+.03,.55,black,monitors);
@@ -119,13 +126,13 @@ export function createRoom(host, reduced) {
   }
   point('#b6d4d3',22,6.7,2,-3.6,7);
   // Neon lettering comes from Google-font text on a transparent canvas.
-  const neon=interactive('NEJOON / ALL ROADS LEAD TO DATA');
-  const neonTexture=canvasLabel('nejoon.',1536,384,'#ffc493','800 280px Geist, Arial');
+  const neon=interactive('hover.neon');
+  const neonTexture=canvasLabel('brand',1536,384,'#ffc493','800 280px Geist, Arial');
   const neonMaterial=new THREE.MeshStandardMaterial({map:neonTexture,emissiveMap:neonTexture,emissive:'#ff9050',emissiveIntensity:4,transparent:true,depthWrite:false,side:THREE.DoubleSide});
   const sign=new THREE.Mesh(new THREE.PlaneGeometry(6.5,1.625),neonMaterial);sign.position.set(7.1,5.45,-7.73);neon.add(sign);
   point('#ff893c',65,7,5.4,-6.7,10);
   // Hoop and hanging net, independently modeled with tubes.
-  const hoop=interactive('HOOP / TAKE A BREAK');
+  const hoop=interactive('hover.hoop');
   box(2.05,1.35,.09,2.1,6.15,-7.57,ivory,hoop);box(1.9,1.2,.025,2.1,6.15,-7.51,dark,hoop);
   for(const x of [1.72,2.48])box(.035,.55,.02,x,5.98,-7.48,ivory,hoop);
   for(const y of [5.71,6.26])box(.8,.035,.02,2.1,y,-7.48,ivory,hoop);
@@ -167,7 +174,7 @@ export function createRoom(host, reduced) {
   if(composer)composer.addPass(finish);
   const mouse=new THREE.Vector2(),smooth=new THREE.Vector2(),raycaster=new THREE.Raycaster();
   const tag=document.querySelector('#hover-tag');let hovered=false,active=true,visible=true,frame=0,lastScreen=-1;
-  function drawArcade(time){ac.fillStyle='#160705';ac.fillRect(0,0,256,256);ac.fillStyle='#ff631e';ac.font='bold 17px monospace';ac.textAlign='center';ac.fillText('DATA RUN',128,30);ac.fillStyle='#ffad66';for(let y=0;y<8;y++)for(let x=0;x<9;x++){if((x+y)%3!==0)ac.fillRect(25+x*24,55+y*14,14,6);}const px=reduced?128:128+Math.sin(time*.8)*70;ac.fillStyle='#ffe4bc';ac.fillRect(px-19,214,38,6);ac.fillRect(128+Math.sin(time)*60,130+Math.cos(time*.7)*60,7,7);ac.fillStyle='#a93110';ac.font='12px monospace';ac.fillText('ALL ROADS LEAD TO DATA',128,246);arcadeTexture.needsUpdate=true;}
+  function drawArcade(time){ac.fillStyle='#160705';ac.fillRect(0,0,256,256);ac.fillStyle='#ff631e';ac.font='bold 17px "Geist Mono", "Apple SD Gothic Neo", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", monospace' ;ac.textAlign='center';ac.fillText(t('arcade.title'),128,30,240);ac.fillStyle='#ffad66';for(let y=0;y<8;y++)for(let x=0;x<9;x++){if((x+y)%3!==0)ac.fillRect(25+x*24,55+y*14,14,6);}const px=reduced?128:128+Math.sin(time*.8)*70;ac.fillStyle='#ffe4bc';ac.fillRect(px-19,214,38,6);ac.fillRect(128+Math.sin(time)*60,130+Math.cos(time*.7)*60,7,7);ac.fillStyle='#a93110';ac.font='12px "Geist Mono", "Apple SD Gothic Neo", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", monospace' ;ac.fillText(t('arcade.footer'),128,246,240);arcadeTexture.needsUpdate=true;}
   function render(time=0){frame=0;if(!active||!visible||document.hidden)return;const t=time*.001;
     smooth.lerp(mouse,.035);
     if(!encounters.cameraOwned){camera.position.copy(base);camera.position.x+=reduced?0:smooth.x*.08+Math.sin(t*.12)*.015;camera.position.y+=reduced?0:smooth.y*.04+Math.cos(t*.15)*.01;
@@ -211,6 +218,12 @@ export function createRoom(host, reduced) {
   host.parentElement.addEventListener('click',e=>{
     if(e.target.closest('a,button')||encounters.busy||!pointerDown||Math.hypot(e.clientX-pointerDown.x,e.clientY-pointerDown.y)>8)return;
     setPointer(e);const item=pick();if(item?.userData.encounter){tag.hidden=true;encounters.focus(item);}
+  });
+  onLangChange(() => {
+    for (const target of targets) if (target.userData.labelKey) target.userData.label=t(target.userData.labelKey);
+    canvasLabels.forEach(redraw=>redraw());drawArcade(performance.now()*.001);
+    if (!tag.hidden) updateHover();
+    wake();
   });
   const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)wake();else{cancelAnimationFrame(frame);frame=0;tag.hidden=true;}},{threshold:0});observer.observe(host);
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else wake();});

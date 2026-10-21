@@ -1,3 +1,7 @@
+import { t, translateDOM, languageSwitch } from './i18n.js';
+
+for (const placeholder of document.querySelectorAll('[data-language-switch]')) placeholder.replaceWith(languageSwitch(placeholder.dataset.languageSwitch === 'terminal'));
+translateDOM();
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduced) document.documentElement.classList.add('js-motion');
 const human=document.querySelector('#human-view');
@@ -18,7 +22,7 @@ document.querySelector('.brand').addEventListener('click',event=>{if(mode==='mac
 document.querySelectorAll('.year').forEach(node=>node.textContent=new Date().getFullYear());
 const revealObserver=new IntersectionObserver(entries=>{for(const entry of entries)if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}},{threshold:.2});
 document.querySelectorAll('.reveal').forEach(element=>revealObserver.observe(element));
-const names=['Ruby on Rails','PostgreSQL','AWS','Docker','Kafka','Python','BigQuery','Redis','Terraform','GitHub Actions','Jekyll','Kubernetes','dbt','Airflow','Snowflake','Spark'];
+const names=t('stack.names');
 const alphabet='░▒▓▚▞01<>/';
 for(const name of names){
   const cell=document.createElement('div');cell.className='stack-cell';cell.tabIndex=0;cell.setAttribute('aria-label',name);
@@ -30,15 +34,16 @@ for(const name of names){
 let scrollTick=false;
 window.addEventListener('scroll',()=>{if(reduced||scrollTick)return;scrollTick=true;requestAnimationFrame(()=>{const progress=Math.min(scrollY/innerHeight,1);document.querySelector('#room').style.opacity=String(1-progress*.8);scrollTick=false;});},{passive:true});
 // Keep navigation and terminal mode working even if WebGL or the CDN is unavailable.
+function setStatus(selector, key) { const node=document.querySelector(selector); node.dataset.i18n=key; node.textContent=t(key); }
 async function initialize(){
   try{
     await document.fonts.ready;
     const {createRoom}=await import('./room.js');
     room=createRoom(document.querySelector('#room'),reduced);room.setActive(mode==='human');
-    document.querySelector('.room-status').textContent='DATA ROOM / LIVE RENDER';
-  }catch(error){console.error('Data room initialization:',error);document.querySelector('.room-fallback').hidden=false;document.querySelector('.room-status').textContent='DATA ROOM / OFFLINE';}
+    setStatus('.room-status', 'room.live');
+  }catch(error){console.error('Data room initialization:',error);document.querySelector('.room-fallback').hidden=false;setStatus('.room-status', 'room.offline');}
   try{
     const {createParticles}=await import('./particles.js');particles=createParticles(document.querySelector('#particles'),reduced);particles.setActive(mode==='human');
-  }catch(error){console.error('Particle initialization:',error);document.querySelector('#particles .media-bottom').textContent='DATA IN MOTION / WEBGL UNAVAILABLE';}
+  }catch(error){console.error('Particle initialization:',error);setStatus('#particles .media-bottom', 'particles.offline');}
 }
 initialize();

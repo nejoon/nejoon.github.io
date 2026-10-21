@@ -20,7 +20,13 @@
   "category": "브랜딩/로고 > 브랜드 디자인",
   "url": "https://flowworks.io/portfolio/11468",
   "shelf": "branding",
-  "tex": "assets/portfolio/00.jpg"
+  "tex": "assets/portfolio/00.jpg",
+  "title_en": "Hidden Creators Brand Standards & Logo Design",
+  "title_ja": "Hidden Creators ブランド基準・ロゴデザイン",
+  "desc_en": "Developed the brand concept and logo through design proposals and close client feedback. Built a design system covering color and typography, then applied it to business cards, T-shirts, staff IDs, YouTube thumbnails, and newsletters. Delivered assets in Figma with practical guidance for favicons, thumbnails, and font use.",
+  "desc_ja": "コンセプトの検討からロゴ案の提案、クライアントとの対話を経てロゴを確定しました。色と書体のガイドラインを整え、名刺、Tシャツ、社員証、YouTubeやニュースレターのサムネイルへ展開しています。Figmaで納品し、ファビコンやフォントの運用も支援しました。",
+  "category_en": "Branding / Logo > Brand Design",
+  "category_ja": "ブランディング・ロゴ > ブランドデザイン"
  },
  {
   "title": "M Remit 해외송금 서비스 웹 및 모바일 UI/UX 디자인",
@@ -33,7 +39,13 @@
   "category": "UI/UX > 웹 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/14114",
   "shelf": "uiux",
-  "tex": "assets/portfolio/01.jpg"
+  "tex": "assets/portfolio/01.jpg",
+  "title_en": "M Remit International Transfers — Web & Mobile UI/UX",
+  "title_ja": "M Remit 海外送金サービスのウェブ・モバイルUI/UX",
+  "desc_en": "Designed the website and mobile app for M Remit, using a blue palette to convey trust and security. The work covers a live exchange-rate calculator, transfer flows, responsive layouts, and mobile screens, supported by custom icons and 3D graphics.",
+  "desc_ja": "海外送金サービスM Remitのウェブサイトとモバイルアプリを設計しました。信頼と安心を伝えるブルーを軸に、リアルタイム為替計算、送金フロー、レスポンシブ画面を構成しています。独自のアイコンと3Dグラフィックで、使いやすさと視覚的な完成度を高めました。",
+  "category_en": "UI/UX > Web UI/UX Design",
+  "category_ja": "UI/UX > ウェブUI/UXデザイン"
  },
  {
   "title": "온라인 교육 시스템 구축 및 운영 전략 제안 PPT 디자인",
@@ -50,7 +62,13 @@
   "category": "PPT > PPT 디자인",
   "url": "https://flowworks.io/portfolio/11708",
   "shelf": "ppt",
-  "tex": "assets/portfolio/02.jpg"
+  "tex": "assets/portfolio/02.jpg",
+  "title_en": "Online Learning Platform Strategy — Presentation Design",
+  "title_ja": "オンライン教育システムの構築・運用戦略 提案資料",
+  "desc_en": "Designed a structured proposal for launching and operating an online learning platform. Clear layouts bring together key strategies, case studies, and learning-data-led operations, using statistics, charts, and UI/UX examples to explain the vision and execution plan.",
+  "desc_ja": "オンライン教育システムの構築と運用戦略を提案する資料を制作しました。主要戦略、成功事例、学習データを活用した運用方針を整理し、統計、グラフ、UI/UX例で構想と実行計画をわかりやすく伝えています。",
+  "category_en": "Presentations > Presentation Design",
+  "category_ja": "プレゼンテーション > 資料デザイン"
  },
  {
   "title": "한화비전 Keeper 매장관리 올인원 솔루션 서비스 소개서 디자인",
@@ -74,7 +92,13 @@
   "category": "PPT > PPT 디자인",
   "url": "https://flowworks.io/portfolio/11703",
   "shelf": "ppt",
-  "tex": "assets/portfolio/03.jpg"
+  "tex": "assets/portfolio/03.jpg",
+  "title_en": "Hanwha Vision Keeper — All-in-One Store Management Brochure",
+  "title_ja": "Hanwha Vision Keeper 店舗管理ソリューションのサービス紹介資料",
+  "desc_en": "Created a service presentation for Keeper, Hanwha Vision’s all-in-one store management solution. Clear layouts and data visuals explain direct pricing, store CCTV, mobile UX, enhanced security, and Hanwha Vision’s technology. Staff-management features—from contracts and payroll to attendance—and owner testimonials highlight everyday operational benefits.",
+  "desc_ja": "Hanwha Visionの店舗管理ソリューションKeeperの紹介資料を制作しました。中間マージンを省いた料金、店舗向けCCTV、モバイルUI/UX、セキュリティ、技術力を整理しています。雇用契約、給与計算、勤怠管理と店主の声を交え、日々の運用に役立つ価値を図解で伝えました。",
+  "category_en": "Presentations > Presentation Design",
+  "category_ja": "プレゼンテーション > 資料デザイン"
  },
  {
   "title": "젭스 반응형 웹사이트 UIUX 디자인",
@@ -92,7 +116,13 @@
   "category": "UI/UX > 웹 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/3766",
   "shelf": "uiux",
-  "tex": "assets/portfolio/04.jpg"
+  "tex": "assets/portfolio/04.jpg",
+  "title_en": "JEBS Responsive Website UI/UX",
+  "title_ja": "JEBS レスポンシブウェブサイトUI/UX",
+  "desc_en": "Designed an educational platform for JEBS, an English academy that teaches through Bible study. The experience helps students learn biblical English in an accessible, engaging way.",
+  "desc_ja": "聖書を通じて英語を学ぶJEBSの教育プラットフォームを設計しました。生徒が聖書の英語をわかりやすく、楽しく学べる体験を目指しています。",
+  "category_en": "UI/UX > Web UI/UX Design",
+  "category_ja": "UI/UX > ウェブUI/UXデザイン"
  },
  {
   "title": "276 홀딩스 반응형 웹 UIUX 리디자인",
@@ -112,7 +142,13 @@
   "category": "UI/UX > 웹 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/3765",
   "shelf": "uiux",
-  "tex": "assets/portfolio/05.jpg"
+  "tex": "assets/portfolio/05.jpg",
+  "title_en": "276 Holdings Responsive Web UI/UX Redesign",
+  "title_ja": "276 Holdings レスポンシブウェブUI/UXリデザイン",
+  "desc_en": "Redesigned a platform for a service that supports SME working capital through direct raw-material distribution and supply, without loans or product restrictions. Clearer information and simpler interactions make the service easier to understand and use.",
+  "desc_ja": "融資や品目の制限に頼らず、原材料の直接流通・納品で中小企業の運転資金を支えるサービスをリデザインしました。情報を整理し、仕組みの理解から利用までをスムーズにしています。",
+  "category_en": "UI/UX > Web UI/UX Design",
+  "category_ja": "UI/UX > ウェブUI/UXデザイン"
  },
  {
   "title": "일러스트 지망생과 취미로도 그리는 사람들을 위한 일러스트 교육 플랫폼 서비스",
@@ -134,7 +170,13 @@
   "category": "UI/UX > 웹 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/3764",
   "shelf": "uiux",
-  "tex": "assets/portfolio/06.jpg"
+  "tex": "assets/portfolio/06.jpg",
+  "title_en": "Illustration Learning Platform for Aspiring Artists & Hobbyists",
+  "title_ja": "イラスト志望者と趣味で描く人のための学習プラットフォーム",
+  "desc_en": "Designed a comprehensive platform to address the challenges faced by aspiring illustrators and hobbyists who want to improve. The service also creates opportunities to discover creative talent more efficiently.",
+  "desc_ja": "イラストレーターを目指す人や、趣味の絵を上達させたい人の課題を解決する総合プラットフォームを設計しました。人材を効率よく見つける機会も提供しています。",
+  "category_en": "UI/UX > Web UI/UX Design",
+  "category_ja": "UI/UX > ウェブUI/UXデザイン"
  },
  {
   "title": "인코다 뮤직 웹사이트 기획 및 디자인",
@@ -147,7 +189,13 @@
   "category": "UI/UX > 웹 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/3763",
   "shelf": "uiux",
-  "tex": "assets/portfolio/07.jpg"
+  "tex": "assets/portfolio/07.jpg",
+  "title_en": "Inkoda Music Website Strategy & Design",
+  "title_ja": "Inkoda Music ウェブサイトの企画・デザイン",
+  "desc_en": "Planned and designed a global entertainment platform connecting audiences with musicians, composers, and music directors across drama, games, and film. Rich colors and a low-scroll interface bring artist profiles, albums, festivals, and concerts into an intuitive overview.",
+  "desc_ja": "音楽家、作曲家、音楽監督と、ドラマ・ゲーム・映画の音楽を紹介するグローバルなプラットフォームを企画・設計しました。深みのある色とスクロールを抑えたUIで、アーティスト、アルバム、フェス、コンサートを見渡せる構成にしています。",
+  "category_en": "UI/UX > Web UI/UX Design",
+  "category_ja": "UI/UX > ウェブUI/UXデザイン"
  },
  {
   "title": "플로우웍스 ppt 디자인",
@@ -170,7 +218,13 @@
   "category": "PPT > PPT 디자인",
   "url": "https://flowworks.io/portfolio/2852",
   "shelf": "ppt",
-  "tex": "assets/portfolio/08.jpg"
+  "tex": "assets/portfolio/08.jpg",
+  "title_en": "Flowworks Product Presentation Design",
+  "title_ja": "Flowworks 商品紹介プレゼンテーション",
+  "desc_en": "Designed a product presentation for Flowworks.",
+  "desc_ja": "Flowworksの商品紹介用プレゼンテーションを制作しました。",
+  "category_en": "Presentations > Presentation Design",
+  "category_ja": "プレゼンテーション > 資料デザイン"
  },
  {
   "title": "축구 매칭 & 팀 관리 앱 UI/UX 디자인: 레츠고알레",
@@ -184,7 +238,13 @@
   "category": "UI/UX > UI/UX 기획",
   "url": "https://flowworks.io/portfolio/1288",
   "shelf": "uiux",
-  "tex": "assets/portfolio/09.jpg"
+  "tex": "assets/portfolio/09.jpg",
+  "title_en": "Lets Goale Football Matching & Team Management App UI/UX",
+  "title_ja": "Lets Goale サッカーマッチング・チーム管理アプリUI/UX",
+  "desc_en": "Designed the UI/UX for Lets Goale, a football matching and team management app. Customizable player profiles, detailed match schedules, and simple team tools bring football networking into one convenient experience.",
+  "desc_ja": "サッカーのマッチングとチーム管理を行うLets GoaleのUI/UXを設計しました。選手プロフィールのカスタマイズ、詳しい試合日程、手軽なチーム管理をまとめ、交流を一つのアプリで完結できるようにしています。",
+  "category_en": "UI/UX > UI/UX Planning",
+  "category_ja": "UI/UX > UI/UX企画"
  },
  {
   "title": "어린이 온라인 교육 플랫폼 '꾸그' 프로모션 및 랜딩 페이지 디자인",
@@ -197,7 +257,13 @@
   "category": "상세페이지 > 상세 페이지 디자인",
   "url": "https://flowworks.io/portfolio/14111",
   "shelf": "marketing",
-  "tex": "assets/portfolio/10.jpg"
+  "tex": "assets/portfolio/10.jpg",
+  "title_en": "Gguge Children’s Learning Platform — Campaign & Landing Pages",
+  "title_ja": "Gguge 子ども向け学習サービスのキャンペーン・ランディングページ",
+  "desc_en": "Designed event, landing, and detail pages for Gguge’s children’s online classes, including EXO Golden Bell, Speaking Science, and a Nobel Prize-themed test. Lively colors, character illustrations, and readable layouts help children and parents understand the programs and take part.",
+  "desc_ja": "子ども向けオンライン教育Ggugeのイベント、ランディング、詳細ページを制作しました。EXO Golden Bell、Speaking Science、ノーベル賞テストなどの講座を、鮮やかな色とキャラクターで紹介しています。親子が内容を理解し、参加しやすい構成です。",
+  "category_en": "Detail Pages > Detail Page Design",
+  "category_ja": "詳細ページ > 詳細ページデザイン"
  },
  {
   "title": "일러스트 온라인 교육 플랫폼 '아뜰리에' 웹 및 모바일 UI/UX 디자인",
@@ -210,7 +276,13 @@
   "category": "UI/UX > 웹 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/14113",
   "shelf": "uiux",
-  "tex": "assets/portfolio/11.jpg"
+  "tex": "assets/portfolio/11.jpg",
+  "title_en": "Atelier Illustration Learning — Web & Mobile UI/UX",
+  "title_ja": "Atelier イラスト学習サービスのウェブ・モバイルUI/UX",
+  "desc_en": "Designed web and mobile experiences for Atelier, an online illustration and subculture course platform. Intuitive navigation, expressive visuals, and a bright component system help learners find classes, while landing and detail pages introduce one-to-one feedback and bootcamps.",
+  "desc_ja": "イラスト・サブカルチャー講座のAtelierで、ウェブとモバイルのUI/UXを設計しました。わかりやすい導線と明るいビジュアルで講座探しを支え、個別フィードバックやブートキャンプを紹介するページも制作しています。",
+  "category_en": "UI/UX > Web UI/UX Design",
+  "category_ja": "UI/UX > ウェブUI/UXデザイン"
  },
  {
   "title": "아동 언어·심리 치료 센터 '이음' 브랜드 SNS 콘텐츠 및 캐릭터 디자인",
@@ -223,7 +295,13 @@
   "category": "SNS 콘텐츠 디자인",
   "url": "https://flowworks.io/portfolio/14110",
   "shelf": "marketing",
-  "tex": "assets/portfolio/12.jpg"
+  "tex": "assets/portfolio/12.jpg",
+  "title_en": "Ieum Child Development Center — Social Content & Characters",
+  "title_ja": "Ieum 児童言語・心理支援センターのSNS・キャラクターデザイン",
+  "desc_en": "Created friendly frog, elephant, and cat characters for Ieum, a children’s language and psychological development center. Extended the identity across social cards, educational webtoons, learning tips, center news, book promotions, event banners, teaching aids, and printed materials, maintaining a consistent, trustworthy tone.",
+  "desc_ja": "児童の言語・心理発達を支援するIeumのために、カエル、ゾウ、ネコなど親しみやすいキャラクターを制作しました。発達情報や言語支援のヒント、教室のお知らせをSNSカードや教育ウェブトゥーンに展開しています。教材告知、イベントバナー、教具、印刷物まで統一し、専門性と信頼を伝えました。",
+  "category_en": "Social Content Design",
+  "category_ja": "SNSコンテンツデザイン"
  },
  {
   "title": "한화비전 키퍼(Keeper) 매장 전용 CCTV SNS 콘텐츠 및 마케팅 디자인",
@@ -236,7 +314,13 @@
   "category": "SNS 광고 디자인",
   "url": "https://flowworks.io/portfolio/14112",
   "shelf": "marketing",
-  "tex": "assets/portfolio/13.jpg"
+  "tex": "assets/portfolio/13.jpg",
+  "title_en": "Hanwha Vision Keeper — Social Content & Marketing",
+  "title_ja": "Hanwha Vision Keeper SNSコンテンツ・マーケティングデザイン",
+  "desc_en": "Designed Instagram content for Keeper’s store CCTV service. Signature orange and black, clear typography, and product mockups communicate its no-contract, no-markup premium positioning. A consistent feed grid and readable information cards present benefits for small businesses and store owners.",
+  "desc_ja": "店舗向けCCTVのKeeperでInstagramコンテンツを制作しました。オレンジと黒、明快な文字組み、製品モックアップで、契約期間の縛りや中間マージンのないプレミアムCCTVという訴求を表現しています。統一したフィードと読みやすいカードで、店舗経営者向けの情報を届けます。",
+  "category_en": "Social Advertising Design",
+  "category_ja": "SNS広告デザイン"
  },
  {
   "title": "플로우웍스 SNS 콘텐츠 및 마케팅 광고 소재 디자인",
@@ -249,7 +333,13 @@
   "category": "3D 목업 이미지",
   "url": "https://flowworks.io/portfolio/14109",
   "shelf": "marketing",
-  "tex": "assets/portfolio/14.jpg"
+  "tex": "assets/portfolio/14.jpg",
+  "title_en": "Flowworks Social Content & Advertising Design",
+  "title_ja": "Flowworks SNSコンテンツ・広告デザイン",
+  "desc_en": "Created social cards and banners for Flowworks, a design outsourcing and subscription platform. Blue and purple, mobile mockups, and a cohesive Instagram grid establish a modern, professional identity while making designer matching and the 100% money-back guarantee easy to understand.",
+  "desc_ja": "デザイン外注・サブスクリプションサービスFlowworksのSNSカードとバナーを制作しました。青と紫、モバイルモックアップ、統一したInstagramの構成で専門性を表現し、デザイナーマッチングや全額返金保証を明快に伝えています。",
+  "category_en": "3D Mockup Imagery",
+  "category_ja": "3Dモックアップ画像"
  },
  {
   "title": "교육 서비스 SNS 광고 및 웹 배너",
@@ -266,7 +356,13 @@
   "category": "SNS 광고 디자인",
   "url": "https://flowworks.io/portfolio/14331",
   "shelf": "marketing",
-  "tex": "assets/portfolio/15.jpg"
+  "tex": "assets/portfolio/15.jpg",
+  "title_en": "Education Services — Social Ads & Web Banners",
+  "title_ja": "教育サービスのSNS広告・ウェブバナー",
+  "desc_en": "Designed promotional social ads and web banners for online courses, including civil-service exam preparation and stock investing. Blue, green, and red palettes, instructor photography, and clear typography emphasize benefits such as Naver Pay rewards and student reviews, with layouts designed to encourage conversion.",
+  "desc_ja": "公務員試験対策や株式投資講座など、オンライン教育のSNS広告とウェブバナーを制作しました。青・緑・赤の配色と講師写真で信頼感を伝え、Naver Pay特典や受講者の声を読みやすく配置し、申し込みにつながる構成を目指しています。",
+  "category_en": "Social Advertising Design",
+  "category_ja": "SNS広告デザイン"
  },
  {
   "title": "한나이브성형외과 프로모션 광고 소재 디자인",
@@ -279,7 +375,13 @@
   "category": "광고 소재 디자인",
   "url": "https://flowworks.io/portfolio/12131",
   "shelf": "marketing",
-  "tex": "assets/portfolio/16.jpg"
+  "tex": "assets/portfolio/16.jpg",
+  "title_en": "Hannaive Plastic Surgery — Promotional Advertising",
+  "title_ja": "Hannaive 美容外科のプロモーション広告",
+  "desc_en": "Designed campaign assets for Hannaive Plastic Surgery, covering double-eyelid surgery, 300-shot Ultherapy, abdominal liposuction, and breast procedures. Model imagery and clear pricing highlight each offer, with treatment-specific colors and layouts that retain a consistent clinic identity.",
+  "desc_ja": "Hannaive美容外科の二重まぶた、ウルセラ300ショット、腹部脂肪吸引、バスト施術などの広告を制作しました。モデル写真と明確な価格表示で内容を伝え、施術ごとに色や構成を変えながら、クリニックとしての統一感を保っています。",
+  "category_en": "Advertising Creative",
+  "category_ja": "広告クリエイティブ"
  },
  {
   "title": "사진/영상 촬영 기업 '빅엔서' 브랜드 디자인",
@@ -298,7 +400,13 @@
   "category": "브랜딩/로고 > 브랜드 디자인",
   "url": "https://flowworks.io/portfolio/1286",
   "shelf": "branding",
-  "tex": "assets/portfolio/17.jpg"
+  "tex": "assets/portfolio/17.jpg",
+  "title_en": "Big Answer Photography & Film — Brand Design",
+  "title_ja": "Big Answer 写真・映像制作会社のブランドデザイン",
+  "desc_en": "Led brand design for photography and film company Big Answer, contributing from planning through design.",
+  "desc_ja": "写真・映像制作会社Big Answerのブランドデザインを担当しました。企画からデザインまで携わっています。",
+  "category_en": "Branding / Logo > Brand Design",
+  "category_ja": "ブランディング・ロゴ > ブランドデザイン"
  },
  {
   "title": "홍차 브랜드 디자인 (베라나)",
@@ -319,7 +427,13 @@
   "category": "브랜딩/로고 > 브랜드 디자인",
   "url": "https://flowworks.io/portfolio/1284",
   "shelf": "branding",
-  "tex": "assets/portfolio/18.jpg"
+  "tex": "assets/portfolio/18.jpg",
+  "title_en": "Verana Black Tea — Brand Design",
+  "title_ja": "Verana 紅茶ブランドのデザイン",
+  "desc_en": "Planned and designed the identity for Korean black tea brand Verana, including the logo, logotype, shopping bags, and packaging.",
+  "desc_ja": "韓国の紅茶ブランドVeranaの企画とデザインを担当しました。ロゴ、ロゴタイプ、ショッピングバッグ、パッケージを制作しています。",
+  "category_en": "Branding / Logo > Brand Design",
+  "category_ja": "ブランディング・ロゴ > ブランドデザイン"
  },
  {
   "title": "한화비전 프리미엄 CCTV 'keeper' 웹 UI/UX 및 마케팅 디자인",
@@ -332,7 +446,13 @@
   "category": "상세페이지 > 상세 페이지 디자인",
   "url": "https://flowworks.io/portfolio/12438",
   "shelf": "uiux",
-  "tex": "assets/portfolio/19.jpg"
+  "tex": "assets/portfolio/19.jpg",
+  "title_en": "Hanwha Vision Keeper — Web UI/UX & Marketing",
+  "title_ja": "Hanwha Vision Keeper ウェブUI/UX・マーケティングデザイン",
+  "desc_en": "Designed Keeper’s premium store CCTV website, organizing brand information, products, and inquiries into a clear user journey. Created marketing content including an A-to-Z startup guide, and built a consistent design system spanning key icons, system icons, illustrations, and color palettes.",
+  "desc_ja": "Hanwha Visionの店舗向けプレミアムCCTV、Keeperのウェブサイトを設計しました。ブランド紹介、製品情報、問い合わせをわかりやすく構成しています。開業ガイドなどの販促コンテンツも制作し、アイコン、イラスト、色を整理したデザインシステムで体験を統一しました。",
+  "category_en": "Detail Pages > Detail Page Design",
+  "category_ja": "詳細ページ > 詳細ページデザイン"
  },
  {
   "title": "올라운더 마케터를 위한 생성형 AI 마스터 과정 PPT 디자인",
@@ -345,7 +465,13 @@
   "category": "PPT",
   "url": "https://flowworks.io/profile/partner/1063",
   "shelf": "ppt",
-  "tex": "assets/portfolio/20.jpg"
+  "tex": "assets/portfolio/20.jpg",
+  "title_en": "Generative AI Masterclass for Versatile Marketers — Presentation Design",
+  "title_ja": "幅広く活躍するマーケター向け生成AIマスター講座の資料デザイン",
+  "desc_en": "Presentation design for a generative AI masterclass for versatile marketers.",
+  "desc_ja": "幅広く活躍するマーケター向けの生成AIマスター講座のプレゼンテーションデザインです。",
+  "category_en": "Presentations",
+  "category_ja": "プレゼンテーション"
  },
  {
   "title": "패션 플랫폼 무신사 리브랜딩 디자인 (개인 프로젝트)",
@@ -359,7 +485,13 @@
   "category": "UI/UX > 모바일 앱 UI/UX 디자인",
   "url": "https://flowworks.io/portfolio/1287",
   "shelf": "uiux",
-  "tex": "assets/portfolio/21.jpg"
+  "tex": "assets/portfolio/21.jpg",
+  "title_en": "MUSINSA Fashion Platform Rebrand — Personal Project",
+  "title_ja": "MUSINSA ファッションプラットフォームのリブランディング（個人制作）",
+  "desc_en": "Analyzed usability issues in MUSINSA’s existing UI/UX and developed a personal reinterpretation of the fashion platform as a rebranding project.",
+  "desc_ja": "ファッションプラットフォームMUSINSAの既存UI/UXの課題を分析しました。独自の視点で再解釈した、個人制作のリブランディングです。",
+  "category_en": "UI/UX > Mobile App UI/UX Design",
+  "category_ja": "UI/UX > モバイルアプリUI/UXデザイン"
  },
  {
   "title": "스포츠 브랜드(고알레) 브랜딩 (로고,의류,그래픽 제작) 프로젝트",
@@ -372,7 +504,13 @@
   "category": "브랜딩/로고 > 브랜드 디자인",
   "url": "https://flowworks.io/portfolio/1281",
   "shelf": "branding",
-  "tex": "assets/portfolio/22.jpg"
+  "tex": "assets/portfolio/22.jpg",
+  "title_en": "GOALE Sports Brand — Identity, Apparel & Graphics",
+  "title_ja": "GOALE スポーツブランドのロゴ・アパレル・グラフィック",
+  "desc_en": "Rebranded GOALE, a Korean sports brand with one million followers across YouTube, TikTok, and Instagram. Defined the brand direction around its business goals and philosophy, then developed the logo, visual mood and guidelines, and apparel graphics.",
+  "desc_ja": "YouTube、TikTok、Instagramで計100万人のフォロワーを持つ韓国のスポーツブランドGOALEをリブランディングしました。事業方針と理念からブランドの見せ方を定め、ロゴ、ビジュアルガイド、アパレルグラフィックまで制作しています。",
+  "category_en": "Branding / Logo > Brand Design",
+  "category_ja": "ブランディング・ロゴ > ブランドデザイン"
  },
  {
   "title": "라이프스타일 (패션,문구 등) 브랜드 '플럭스'",
@@ -385,7 +523,13 @@
   "category": "브랜딩/로고 > 브랜드 디자인",
   "url": "https://flowworks.io/portfolio/1283",
   "shelf": "branding",
-  "tex": "assets/portfolio/23.jpg"
+  "tex": "assets/portfolio/23.jpg",
+  "title_en": "Flux Lifestyle Brand — Identity Design",
+  "title_ja": "Flux ライフスタイルブランドのデザイン",
+  "desc_en": "Defined the direction and identity for lifestyle brand Flux before launch. The work spans strategy and design, including the logo, business cards, stationery, mailers, and banners.",
+  "desc_ja": "ファッションや文具を展開するFluxで、立ち上げ前の方向性づくりからデザインまで担当しました。ロゴ、名刺、郵送物・紙もの、バナーを制作しています。",
+  "category_en": "Branding / Logo > Brand Design",
+  "category_ja": "ブランディング・ロゴ > ブランドデザイン"
  },
  {
   "title": "B2B IT 기업/대기업을 위한 광고 및 마케팅 디자인 포트폴리오",
@@ -398,7 +542,13 @@
   "category": "SNS 광고 디자인",
   "url": "https://flowworks.io/portfolio/12130",
   "shelf": "marketing",
-  "tex": "assets/portfolio/24.jpg"
+  "tex": "assets/portfolio/24.jpg",
+  "title_en": "B2B Technology & Enterprise — Advertising and Marketing Design",
+  "title_ja": "B2B IT・大企業向けの広告・マーケティングデザイン",
+  "desc_en": "Created recruitment, campaign, and service-promotion assets for Gguge, Keeper, and Flowworks. Friendly children’s imagery supports education campaigns; CCTV materials emphasize security and value; design-outsourcing content highlights ease and reliability. Clear messaging and event pages make each service’s core benefits accessible.",
+  "desc_ja": "Gguge、Keeper、Flowworksの募集・販促・サービス紹介を制作しました。教育では子どもの明るい写真、CCTVでは安全性と費用対効果、デザイン外注では手軽さと信頼性を軸にしています。広告やイベントページを通じ、各サービスの価値を明快に伝えました。",
+  "category_en": "Social Advertising Design",
+  "category_ja": "SNS広告デザイン"
  },
  {
   "title": "식품 및 리테일 분야 프로모션 배너 디자인",
@@ -412,7 +562,13 @@
   "category": "상세페이지 > 상세 페이지 디자인",
   "url": "https://flowworks.io/portfolio/12129",
   "shelf": "marketing",
-  "tex": "assets/portfolio/25.jpg"
+  "tex": "assets/portfolio/25.jpg",
+  "title_en": "Food & Retail Promotional Banners",
+  "title_ja": "食品・小売向けプロモーションバナー",
+  "desc_en": "Designed banners for food and retail campaigns, from major sales and seafood or meat promotions to cherry-blossom-season offers. Vivid colors, illustrations, and product photography make seasonal events, special discounts, and customer appreciation campaigns clear and engaging.",
+  "desc_ja": "大規模セール、水産・精肉の特売、桜の季節のキャンペーンなど、食品・小売のバナーを制作しました。鮮やかな色、イラスト、商品写真を使い、季節の催事や特別割引、感謝企画の魅力をわかりやすく伝えています。",
+  "category_en": "Detail Pages > Detail Page Design",
+  "category_ja": "詳細ページ > 詳細ページデザイン"
  },
  {
   "title": "골프 브랜드 딤플 브랜딩 프로젝트",
@@ -435,6 +591,12 @@
   "category": "브랜딩/로고 > 브랜드 디자인",
   "url": "https://flowworks.io/portfolio/1285",
   "shelf": "branding",
-  "tex": "assets/portfolio/26.jpg"
+  "tex": "assets/portfolio/26.jpg",
+  "title_en": "DIMPLE Golf Brand — Branding Project",
+  "title_ja": "ディンプル ゴルフブランドのブランディング",
+  "desc_en": "Contributed to planning and design for golf brand DIMPLE, creating the logo, graphics, Instagram content, printed collateral, posters, and on-site branding.",
+  "desc_ja": "ゴルフブランドのディンプルで、企画とデザインに参加しました。ロゴ、グラフィック、Instagramコンテンツ、各種印刷物、ポスター、現地でのブランディングを制作しています。",
+  "category_en": "Branding / Logo > Brand Design",
+  "category_ja": "ブランディング・ロゴ > ブランドデザイン"
  }
 ]

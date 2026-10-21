@@ -1,3 +1,4 @@
+import { t, getLang, onLangChange, translateDOM, languageSwitch } from './i18n.js';
 import * as THREE from 'three';
 
 // Shared camera transitions for character conversations and portfolio artwork.
@@ -6,11 +7,11 @@ export function createEncounters({scene, camera, host, targets, box, rod, reduce
   const layer=document.createElement('div');layer.className='encounter-labels';host.parentElement.append(layer);
   const loader=new THREE.TextureLoader();
   const people=[
-    {id:'sejun',label:'세준',subtitle:'Product Designer · UI/UX',x:-5.35,z:-.65,height:1.75,lines:[
-      '안녕하세요, 제품 화면의 UI/UX 를 맡고 있는 세준입니다.','예쁜 화면보다 덜 헷갈리는 화면을 먼저 만듭니다.','디자인대로 구현되도록 개발자와 같은 컴포넌트 언어로 일해요.','피그마에서 끝내지 않고 프레이머·코드 프로토타입으로 바로 검증합니다.','왼쪽 선반에 작업 27개 정리해 뒀어요. 하나씩 눌러 보세요.','이 방도 디자인 작업 중 하나예요. 둘러보세요.']},
-    {id:'mingyeong',label:'민경',subtitle:'Brand & Visual Designer',x:4.55,z:-3.25,height:1.75*.95,lines:[
-      '안녕하세요, 브랜드와 비주얼을 맡고 있는 민경입니다.','브랜드는 로고 하나가 아니라 처음 마주치는 모든 순간이에요.','컬러와 타이포만 정해져도 화면의 절반은 완성돼요.','이 네온사인과 모니터 톤도 브랜드 가이드에서 시작했어요.','브랜딩 칸부터 보시면 결이 보일 거예요.']}
+    {id:'sejun',x:-5.35,z:-.65,height:1.75},
+    {id:'mingyeong',x:4.55,z:-3.25,height:1.75*.95}
   ];
+  function localizePerson(data) { data.label=t(`${data.id}.name`); data.subtitle=t(`${data.id}.subtitle`); data.lines=t(`${data.id}.lines`); }
+  people.forEach(localizePerson);
   const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCanvas.height=64;
   const ctx=shadowCanvas.getContext('2d'), gradient=ctx.createRadialGradient(32,32,0,32,32,32);
   gradient.addColorStop(0,'#0009');gradient.addColorStop(1,'#0000');ctx.fillStyle=gradient;ctx.fillRect(0,0,64,64);
@@ -23,16 +24,17 @@ export function createEncounters({scene, camera, host, targets, box, rod, reduce
     const sprite=new THREE.Mesh(new THREE.PlaneGeometry(data.height*51/91,data.height),new THREE.MeshBasicMaterial({map:texture,transparent:true,alphaTest:.5,side:THREE.DoubleSide}));
     sprite.position.y=data.height/2+.025;root.add(sprite);
     const shadow=new THREE.Mesh(new THREE.PlaneGeometry(.95,.65),new THREE.MeshBasicMaterial({map:shadowMap,transparent:true,depthWrite:false}));shadow.rotation.x=-Math.PI/2;shadow.position.set(data.x,.025,data.z);scene.add(shadow);
-    const name=document.createElement('button');name.type='button';name.className='character-name';name.textContent=data.label;name.setAttribute('aria-label',`${data.label}와 대화`);layer.append(name);
-    const bubble=document.createElement('div');bubble.className='idle-speech';bubble.lang='ko';bubble.hidden=true;layer.append(bubble);
+    const name=document.createElement('button');name.type='button';name.className='character-name';name.textContent=data.label;name.setAttribute('aria-label',t('talk', {name:data.label}));layer.append(name);
+    const bubble=document.createElement('div');bubble.className='idle-speech';bubble.lang=getLang();bubble.hidden=true;layer.append(bubble);
     name.addEventListener('click',e=>{e.stopPropagation();focus(root);});
     characters.push({root,sprite,name,bubble,data});
   }
   // Clone shared materials before highlighting so only the selected object glows.
   for(const root of entries)root.traverse(mesh=>{if(mesh.isMesh&&mesh.material.emissive){mesh.material=mesh.material.clone();mesh.userData.baseEmissive=mesh.material.emissive.clone();mesh.userData.baseIntensity=mesh.material.emissiveIntensity;}});
-  const dialog=document.createElement('dialog');dialog.className='encounter-modal';dialog.lang='ko';dialog.setAttribute('aria-labelledby','encounter-title');
-  dialog.innerHTML='<div class="encounter-panel"><button class="encounter-close" type="button" aria-label="닫기">×</button><img class="encounter-portrait" alt="" hidden><div class="encounter-copy"><span class="mono encounter-label"></span><h2 id="encounter-title"></h2><p class="encounter-subtitle"></p><p class="encounter-description"></p><p class="encounter-speech" aria-live="polite" hidden></p><button class="encounter-again" type="button" hidden>다른 말 듣기</button><a class="encounter-link" href="/">자세히 보기 ↗</a></div></div>';
-  document.body.append(dialog);
+  const dialog=document.createElement('dialog');dialog.className='encounter-modal';dialog.lang=getLang();dialog.setAttribute('aria-labelledby','encounter-title');
+  dialog.innerHTML='<div class="encounter-panel"><button class="encounter-close" type="button" data-i18n-aria-label="close">×</button><img class="encounter-portrait" alt="" hidden><div class="encounter-copy"><span class="mono encounter-label"></span><h2 id="encounter-title"></h2><p class="encounter-subtitle"></p><p class="encounter-description"></p><p class="encounter-speech" aria-live="polite" hidden></p><button class="encounter-again" type="button" hidden data-i18n="again"></button><a class="encounter-link" href="/" data-i18n="details"></a></div></div>';
+  dialog.querySelector('.encounter-copy').prepend(languageSwitch());
+  document.body.append(dialog);translateDOM(dialog);
   const el=selector=>dialog.querySelector(selector);
   let focused=null,flight=null,highlighted=null,typeTimer,previousFocus,previousOverflow,active=true,lastLine=-1;
   let nextSpeech=performance.now()+8000+Math.random()*4000,speechUntil=0;
@@ -52,11 +54,11 @@ export function createEncounters({scene, camera, host, targets, box, rod, reduce
     if(focused.userData.project){portfolio.open(focused);return;}
     if(focused===portfolio.wall)return;
     const data=focused.userData.encounter,person=Boolean(data.lines);
-    el('.encounter-label').textContent=person?'ROOM / CONVERSATION':`SHELF / ${data.label}`;
+    el('.encounter-label').textContent=person?t('conversation'):t('shelf',{name:data.label});
     el('h2').textContent=data.title||data.label;el('.encounter-subtitle').textContent=data.subtitle||'';
     el('.encounter-description').textContent=data.description||'';
     const portrait=el('img');portrait.hidden=!person;
-    if(person){portrait.src=`./assets/characters/${data.id}_portrait.webp`;portrait.alt=`${data.label} 초상화`;}
+    if(person){portrait.src=`./assets/characters/${data.id}_portrait.webp`;portrait.alt=t('portrait',{name:data.label});}
     el('.encounter-speech').hidden=el('.encounter-again').hidden=!person;el('.encounter-link').hidden=person;
     dialog.classList.toggle('is-character',person);previousOverflow=document.body.style.overflow;document.body.style.overflow='hidden';dialog.showModal();el('.encounter-close').focus();if(person)say();
   }
@@ -95,6 +97,25 @@ export function createEncounters({scene, camera, host, targets, box, rod, reduce
     node.style.left=`${THREE.MathUtils.clamp((projected.x+1)*host.clientWidth/2,35,host.clientWidth-35)}px`;
     node.style.top=`${(1-projected.y)*host.clientHeight/2+host.offsetTop}px`;
   }
+  onLangChange(() => {
+    dialog.lang=getLang();
+    for (const c of characters) {
+      localizePerson(c.data); c.root.userData.label=c.data.label;
+      c.name.textContent=c.data.label; c.name.setAttribute('aria-label',t('talk',{name:c.data.label}));
+      c.bubble.lang=getLang();
+      if (c.bubble.textContent && c.bubbleLine !== undefined) c.bubble.textContent=c.data.lines[c.bubbleLine];
+    }
+    if (dialog.open && focused?.userData.encounter?.lines) {
+      const data=focused.userData.encounter;
+      clearInterval(typeTimer);
+      el('.encounter-label').textContent=t('conversation');
+      el('h2').textContent=data.label; el('.encounter-subtitle').textContent=data.subtitle;
+      el('img').alt=t('portrait',{name:data.label});
+      el('.encounter-speech').textContent=data.lines[Math.max(0,lastLine)];
+      el('.encounter-speech').setAttribute('aria-live','polite');
+    }
+    wake();
+  });
   return {
     get busy(){return (!!focused&&focused!==portfolio.wall)||!!flight;},get cameraOwned(){return !!focused||!!flight;},focus,highlight,
     update(time){
@@ -109,7 +130,7 @@ export function createEncounters({scene, camera, host, targets, box, rod, reduce
         c.bubble.hidden=c.bubble.hidden||time>speechUntil||!c.bubble.textContent;
       });
 
-      if(!focused&&time>=nextSpeech){characters.forEach(c=>c.bubble.textContent='');const c=characters[Math.floor(Math.random()*characters.length)];c.bubble.textContent=c.data.lines[Math.floor(Math.random()*c.data.lines.length)];speechUntil=time+4000;nextSpeech=time+8000+Math.random()*4000;}
+      if(!focused&&time>=nextSpeech){characters.forEach(c=>c.bubble.textContent='');const c=characters[Math.floor(Math.random()*characters.length)];c.bubbleLine=Math.floor(Math.random()*c.data.lines.length);c.bubble.textContent=c.data.lines[c.bubbleLine];speechUntil=time+4000;nextSpeech=time+8000+Math.random()*4000;}
     },
     resize(){if(focused&&!flight){const dest=destination(focused);camera.position.copy(dest.position);currentLook.copy(dest.target);camera.lookAt(currentLook);}},
     setActive(value){active=value;layer.hidden=!value;if(!value){portfolio.close();clearInterval(typeTimer);if(dialog.open){dialog.close();document.body.style.overflow=previousOverflow||'';}focused=null;flight=null;clearHighlight();host.parentElement.classList.remove('encounter-focused');camera.position.copy(base);currentLook.copy(look);}nextSpeech=performance.now()+8000+Math.random()*4000;}
